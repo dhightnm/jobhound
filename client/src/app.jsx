@@ -1,11 +1,16 @@
 import React from "react"
+import Login from "./components/authentication/login";
 
 const App = (props) => {
+
   return (
+    <>
     <div>
-      WHAT UP YO!
-      Adding this too!
+      This is the Home Screen
     </div>
+    <button onClick={() => window.location.href = '/login'} href="/login">Login</button> 
+    </>
+    
   )
 };
 
