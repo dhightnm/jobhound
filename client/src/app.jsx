@@ -8,7 +8,7 @@ const App = (props) => {
     <div>
       This is the Home Screen
     </div>
-    <button onClick={() => window.location.href = '/login'} href="/login">Login</button> 
+    <button onClick={() => window.location.href = '/login'}>Login</button> 
     </>
     
   )
