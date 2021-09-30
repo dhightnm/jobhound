@@ -5,6 +5,7 @@ const SRC_DIR = path.join(__dirname, 'client', 'src');
 const OUT_DIR = path.join(__dirname, 'client', 'dist');
 
 module.exports = {
+  devtool: 'source-map',
   entry: path.join(SRC_DIR, 'index.js'),
   output: {
     path: OUT_DIR,
@@ -18,16 +19,15 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader",
-        ]
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ]
   },
   
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.css']
   },
   
 };

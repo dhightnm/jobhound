@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from '../../css/NavBar.module.css';
 
 const NavBar = () => {
     return (
-        <div>
-        <h1 className='NavBar'>Welcome to Jobhound</h1>
+        <div className={styles.NavBar}>
+        <h1 >Welcome to Jobhound</h1>
         </div>
     )
 }

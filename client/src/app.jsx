@@ -2,6 +2,7 @@ import React from "react"
 import Login from "./components/authentication/login";
 import AppliedTo from "./components/job status/appliedTo";
 import NavBar from "./components/NavBar/NavBar";
+
 const App = (props) => {
 
   return (
