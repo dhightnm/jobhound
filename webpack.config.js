@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const SRC_DIR = path.join(__dirname, 'client', 'src');
 const OUT_DIR = path.join(__dirname, 'client', 'dist');
@@ -15,11 +16,19 @@ module.exports = {
         test:/\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {loader: "css-loader"},
+        ]
+      },
     ]
   },
+  
   mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx']
-  }
+  },
+  
 };
