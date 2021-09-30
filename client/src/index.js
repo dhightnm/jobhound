@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import App from './app';
 import { BrowserRouter } from 'react-router-dom';
-import '../src/css/NavBar.css';
+import './css/NavBar.css';
 //Dammit Alex
 ReactDom.render(
 <BrowserRouter>
