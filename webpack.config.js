@@ -9,7 +9,8 @@ module.exports = {
   entry: path.join(SRC_DIR, 'index.js'),
   output: {
     path: OUT_DIR,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -23,6 +24,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ]
+  },
+
+  devServer: {
+    historyApiFallback: true,
   },
   
   mode: 'development',

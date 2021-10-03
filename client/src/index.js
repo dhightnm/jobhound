@@ -16,8 +16,9 @@ const firebaseConfig = {
   messagingSenderId: "447508536494",
   appId: "1:447508536494:web:e49d629aafb6e506fca13f"
 };
-const app = initializeApp(firebaseConfig);
-
 // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth = app.auth();
+export default app;
 //Dammit Alex
 ReactDom.render(<App/>, document.getElementById('App'));
