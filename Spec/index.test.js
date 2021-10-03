@@ -11,6 +11,6 @@ test('Simple test for CircleCI', () => {
   expect(2 + 2).toEqual(4);
 });
 
-it('Tests if App is properly rendering', () => {
+test('Tests if App is properly rendering', () => {
   shallow(<App/>);
 });

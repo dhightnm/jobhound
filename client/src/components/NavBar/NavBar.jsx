@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className={styles.NavBar}>
             <h1 >Welcome to Jobhound</h1> 
             <div>
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/'><button>Home</button></NavLink>
                 <NavLink to='/login'> Login</NavLink>
             </div>
         </div> 
