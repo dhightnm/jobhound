@@ -4,7 +4,7 @@
         "node": "circleci/node@4.1"
     },
     "workflows": {
-        "sample": {
+        "RenderTest": {
             "jobs": [
                 {
                     "node/test": {
