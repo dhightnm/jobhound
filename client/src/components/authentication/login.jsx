@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => { 
 
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  
+  const auth = getAuth();
+  createUserWithEmailAndPassword(auth, username, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    console.log(user);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
 
 
   return (
     <>
     <h1>Login</h1>
-    <form classname='login-form'>
+    <form className='login-form'>
       <h3>Username:</h3>
         <input 
           type='text' 

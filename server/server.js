@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 app.use('/', require('./routes/index.js'))
-app.use('/', require('./routes/login'));
+// app.use('/', require('./routes/login'));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
