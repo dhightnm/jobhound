@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-
+import styles from '../../css/Login.module.css';
 const Login = () => { 
 
   const [username, setUsername] = useState();
@@ -19,9 +19,9 @@ const Login = () => {
 
 
   return (
-    <>
+    <div className={styles.loginContainer}>
     <h1>Login</h1>
-    <form className='login-form'>
+    <form className={styles.loginForm}>
       <h3>Username:</h3>
         <input 
           type='text' 
@@ -39,7 +39,7 @@ const Login = () => {
         <button type='submit'>Submit</button>
       </div>
     </form>
-    </>
+    </div>
   )
 }
 

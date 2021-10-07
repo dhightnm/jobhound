@@ -1,0 +1,15 @@
+.loginContainer {
+ display: flex;
+ justify-content: center;
+ margin-top: 2em;
+ max-width: 75%;
+}
+
+.loginForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 30%;
+    border: black;
+    border-style: solid;
+}
