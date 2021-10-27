@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const port = 3000
 
-const {sequelize.authenticate: authenticate} = require('./database/connection.js');
+const sequelize = require('./database/connection.js');
 
 app.use(express.static(`${__dirname}/../client/dist/`));
 app.use(express.json());
@@ -17,7 +17,7 @@ sequelize.authenticate()
   })
 
 app.use('/', require('./routes/index.js'))
-// app.use('/', require('./routes/login'));
+// app.use('/', require('./routes/login')); 
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
